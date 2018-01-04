@@ -1,10 +1,10 @@
 class Article < ApplicationRecord
-  #重複許さんやつ
+  #titleを重複許さんやつに設定
   validates :title, uniqueness:true
 
-  #15文字以上は許さんやつ
+  #titleを15文字以上は許さんやつに設定
   validates :title, length: {maximum:15}
 
-  #30文字以上は許さんやつ
+  #textを30文字以上は許さんやつに設定
   validates :text, length: {maximum:30}
 end
