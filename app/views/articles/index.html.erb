@@ -1,6 +1,7 @@
 <h1>記事一覧</h1>
 <p><%= link_to "記事作成",new_article_path %></p>
-<table border="1">
+<table border="1", class="msr_table01">
+<thead>
   <tr>
     <th>title</th>
     <th>Text</th>
@@ -8,6 +9,7 @@
     <th>編集</th>
     <th>削除</th>
   </tr>
+</thead>
 <% @article.each do |article| %>
  <tr>
    <td><%= link_to article.title ,article_path(article)%></td>
