@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+  get 'articles/output' 
   root 'welcome#index'
 
 

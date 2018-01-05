@@ -10,10 +10,8 @@ class ArticlesController < ApplicationController
   end
 
   def index
-
     @article = Article.all.order(updated_at: "desc").limit(10)
     render 'articles/index'
-
   end
 
   def edit
@@ -30,7 +28,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-
     @article = Article.new(article_params)
 #    @article.save
     if @article.save
@@ -47,6 +44,10 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find params[:id]
     render 'articles/show'
+  end
+
+  def output
+    @article = Article.all.order(updated_at: "desc")
   end
 
 end
