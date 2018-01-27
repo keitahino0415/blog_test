@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'articles/output'
   root 'welcome#index'
 
-
   root 'users#index'
   resources :users
   resources :users_sessions
