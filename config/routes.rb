@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'login' => 'user_sessions#new'
   post 'logout' => 'user_sessions#destroy'
 
+  get 'analysis/index'
+
   resources :articles
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
