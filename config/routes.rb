@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'articles/output'
   root 'welcome#index'
 
+  get 'irkit/operation'
+
   root 'users#index'
   resources :users
   resources :users_sessions
